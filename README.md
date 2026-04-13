@@ -1,4 +1,4 @@
-# PlayArtemis.Online 🚀
+# PlayArtemis.Online
 
 **Remote bridge access for Artemis Spaceship Bridge Simulator -- powered by automation.**
 

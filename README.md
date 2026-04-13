@@ -6,7 +6,9 @@
 
 Ever wanted to play a starship bridge simulator with your friends without everyone needing to be in the same room? I wanted that to exist, so I built it.
 
-[PlayArtemis.Online](https://PlayArtemis.Online) is an end-to-end automated session management system that lets TRMN members request and play Artemis Spaceship Bridge Simulator sessions on demand from anywhere in the world. When a request comes in, I get a push notification to approve or deny it. If approved, the system handles everything else automatically -- no further input from me required.
+Artemis Spaceship Bridge Simulator is an existing cooperative multiplayer game created by Thom Robertson ([artemisspaceshipbridge.com](https://www.artemisspaceshipbridge.com)), where players each take a station on a starship bridge -- helm, weapons, engineering, communications. Think Star Trek, but you and your friends are actually running the ship. This project automates the process of spinning up and managing an Artemis server remotely.
+
+[PlayArtemis.Online](https://playartemis.online/) is an end-to-end automated session management system that lets TRMN members request and play Artemis Spaceship Bridge Simulator sessions on demand from anywhere in the world. When a request comes in, I get a push notification to approve or deny it. If approved, the system handles everything else automatically -- no further input from me required.
 
 ---
 

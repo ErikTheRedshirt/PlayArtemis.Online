@@ -1,51 +1,57 @@
-# Project Violet 🌸
+# PlayArtemis.Online 🚀
 
-**Private AI · End-to-End Encrypted · Your data never leaves your hardware.**
+**Remote bridge access for Artemis Spaceship Bridge Simulator -- powered by automation.**
 
-![Violet Login Screen](screenshots/violet-login.png)
+![Artemis Boot Sequence](screenshots/artemis-demo.gif)
 
-Violet is a self-hosted web chat interface built around local LLM inference. I built it because I wanted a capable AI assistant that didn't send my data to a third party -- everything runs on my own hardware, served through a secure Cloudflare tunnel.
+Ever wanted to play a starship bridge simulator with your friends without everyone needing to be in the same room? I wanted that to exist, so I built it.
+
+PlayArtemis.Online is an end-to-end automated session management system that lets TRMN members request and play Artemis Spaceship Bridge Simulator sessions on demand from anywhere in the world. When a request comes in, I get a push notification to approve or deny it. If approved, the system handles everything else automatically -- no further input from me required.
 
 ---
 
-## What it does
+## How it works
 
-- Streaming chat interface with multiple prompt modes (Creative, Summarize, Explain, Code, Analyze)
-- Local LLM inference via llama.cpp with full CUDA acceleration
-- Multi-model support -- currently running ten models including Dolphin, DeepSeek, Qwen, and multimodal options
-- File and image upload support
-- Conversation history
-- Chain of thought mode
-- Full admin panel for model management and user control
-- User authentication with role-based access (Admin / Power User)
-- Accessible from anywhere via Cloudflare tunnel
+1. **Request** -- A player submits a request through the retro terminal-themed web interface, providing their name, email, and optionally their TRMN character details
+2. **Approval** -- I receive a push notification on my phone with Approve/Deny buttons
+3. **Wake** -- On approval, the system sends a Wake-on-LAN packet to bring the dedicated Artemis PC online
+4. **Launch** -- Automated GUI scripting starts Artemis and configures it for the session
+5. **Play** -- The requestor receives connection details and can begin their session
+6. **Wrap-up** -- When the session ends, a summary email is automatically sent to the requestor
 
 ---
 
 ## Screenshots
 
-### Chat Interface
-![Violet Chat Interface](screenshots/violet-chat.png)
+### Bridge Access Terminal
+![Bridge Access Terminal](screenshots/artemis-terminal.png)
 
-### Admin Panel
-![Violet Admin Panel](screenshots/violet-admin.png)
+### Automation Pipeline (n8n)
+![n8n Workflow](screenshots/artemis-n8n.png)
+
+### Approval Notification (ntfy)
+![Approval Notification](screenshots/artemis-ntfy.png)
+
+### Bridge Systems Online
+![Bridge Ready](screenshots/artemis-ready.png)
 
 ---
 
 ## Stack
 
-| Layer | Technology |
+| Component | Technology |
 |---|---|
-| Backend | Flask |
-| Inference | llama.cpp (CUDA accelerated) |
-| Database | SQLite |
-| Hardware | NVIDIA DGX Spark |
-| Networking | Cloudflare Tunnel |
+| Request Form | Custom HTML/CSS (Manticore Fleet Systems terminal theme) |
+| Automation Pipeline | n8n |
+| Push Notifications | ntfy |
+| Hardware Wake | Wake-on-LAN |
+| Game Launch | GUI automation / shell scripting |
+| Infrastructure | Self-hosted |
 
 ---
 
 ## Notes
 
-This is a personal project built for my own use and is not open for public deployment or contributions. The source code is kept private. This repo exists as a portfolio showcase.
+This project was built primarily for use by members of [TRMN (The Royal Manticoran Navy)](https://trmn.org) fan organization. It is not open for public contributions or deployment. This repo exists as a portfolio showcase.
 
-*I used AI tools heavily to accelerate the build -- because knowing how to leverage AI effectively to ship working software is the whole point.*
+*AI tools helped me build it faster than I could have alone -- which is increasingly just how I work.*
